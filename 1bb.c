@@ -6,16 +6,26 @@ struct process
 	int bt,ft,at,tat,wt;
 }p[5];
 void main()
-{int i,n,ttat=0,twt=0;
+{int i,j,temp,n,ttat=0,twt=0;
  float atat=0,awt=0;
 printf("enter number of process");
 scanf("%d",&n);
 for(i=1;i<=n;i++)
-{	printf("\nenter no of proc");
+{	printf("\nenter name of %d process",i);
         scanf("%d",&p[i].t);
 	printf("\nenter arrival time and burst time");
 	scanf("%d%d",&p[i].at,&p[i].bt);
 }
+for(i=0;i<n-1;i++)
+ for(j=i;j<n-i-1;j++)
+  if(p[j].bt>p[j+1].bt)
+  {
+      temp=p[j].bt;
+      p[j].bt=p[i+1].bt;
+      p[j+1].bt=temp;
+  }
+
+
 p[1].ft=p[1].bt;
 for(i=2;i<=n;i++)
 {

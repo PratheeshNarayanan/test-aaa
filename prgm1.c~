@@ -31,6 +31,6 @@ for(i=1;i<=n;i++)
 }
 atat=ttat/n;
 awt=twt/n;
-printf("\naverage turn aroundtime=%f",atat);
+printf("\naverage turnaroundtime=%f",atat);
 printf("\naverage waiting time=%f",awt);
 }

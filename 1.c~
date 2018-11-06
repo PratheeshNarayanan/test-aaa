@@ -1,0 +1,16 @@
+#include<stdio.h>
+void main()
+{
+char file;
+    
+    FILE *f;
+    f = fopen("new.txt", "w");
+    printf("\n Enter Sentence: ");
+    scanf("%s", &file);
+    
+    fclose(f);
+
+
+}
+
+
